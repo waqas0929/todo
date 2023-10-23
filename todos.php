@@ -10,7 +10,7 @@ if (isset($_POST['add_todo'])) {
 
 if (isset($_POST['edit_todo'])) {
     $id = $_POST['edit_id'];
-    $task = $_POST['edit_task'];
+    $task = $_POST['task'];
     $sql = "UPDATE todos SET task='$task' WHERE id=$id";
     $conn->query($sql);
     header("Location: index.php");
